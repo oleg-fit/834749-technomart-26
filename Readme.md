@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Олег Федоров](https://up.htmlacademy.ru/htmlcss/26/user/834749).
-* Наставник: `Неизвестно`.
+* Наставник: [Антон Шабельников](https://htmlacademy.ru/profile/hulkaton).
 
 ---
 
