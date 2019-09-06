@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cuprum', sans-serif;
+    /* font-family: 'PT Sans', sans-serif; */
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0 10px;
+    width: 960px;
+}
+
+
+
+
+
+
+/* ======== Footer ================= */
+.footer-bottom {
+    background-color: #293449;
+}
+
+.footer-bottom__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 37px 0 32px;
+    align-items: center;
+}
+
+.footer-bottom__copyright {
+    max-width: 240px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.social {
+    margin-left: 126px;
+}
+
+.footer-bottom__social {
+    display: flex;
+}
+
+.social__item {
+    display: flex;
+    justify-content: center;
+    margin-right: 5px;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    background-color: #212a3a;
+    border-radius: 50%;
+    transition: background-color .2s linear;
+}
+
+.social__item:hover,
+.social__item:focus {
+    background-color: #ee3643;
+    outline: none;
+}
+/* Какой псевдокласс отвечает за действие по клику ???????? */
+.social__icon {
+    fill: #ffffff;
+}
+
+.social__icon_vk {
+    height: 27px;
+}
+
+.social__icon_facebook {
+    height: 22px;
+}
+
+.social__icon_in {
+    height: 20px;
+}
+
+.list-info {
+    display: flex;
+    margin: 0 15px 0 0;
+    list-style: none;
+}
+
+.list-info__item {
+    margin-left: 51px;
+}
+
+.list-info__text {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+}
+
+.list-info__link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffd180;
+    text-decoration: none;
+    transition: text-decoration .2s linear;
+}
+
+.list-info__link:hover {
+    text-decoration: underline;
+}
