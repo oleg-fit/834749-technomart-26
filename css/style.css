@@ -205,6 +205,35 @@ body {
     opacity: 0.3;
 }
 
+.user-block {
+    margin-top: 13px;
+    margin-left: -18px;
+}
+
+.user-block__name {
+    display: block;
+    margin-bottom: 8px;
+    padding: 10px 67px 10px 45px;
+    font-size: 21px;
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.user-block__links {
+    margin-left: 15px;
+}
+
+.user-block__link {
+    font-size: 16px;
+    color: #32425c;
+}
+
+.user-block__link:first-child {
+    margin-right: 28px;
+}
+
+
 .main-nav {
     padding: 23px 0 60px 0;
     background-color: #f3f7f8;
@@ -240,7 +269,105 @@ body {
     opacity: 0.5;
 }
 
+/* ======== About-perforator ================= */
+.about-perforator {
+    padding: 39px 0 57px 0;
+    background-color: #f2f6f8;
+    color: #000000;
+}
+
+.about-perforator__title {
+    margin-top: 22px;
+    margin-bottom: 22px;
+    font-size: 30px;
+    font-weight: 400;
+}
+
+.about-perforator__text {
+    font-size: 13px;
+    font-weight: 400;
+    font-family: 'PT Sans', sans-serif;
+    line-height: 24px;
+}
+
+
 /* ======== Footer ================= */
+.footer {
+    margin-bottom: 100px;
+}
+
+.footer-top {
+    padding-bottom: 29px;
+    background-color: #32425c;
+}
+
+.footer-top__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-top__logo {
+    margin-bottom: 34px;
+    padding: 16px 0 13px 0;
+    font-size: 30px;
+}
+
+.footer-top__address {
+    margin-left: 3px;
+    width: 335px;
+    font-size: 18px;
+    color: #f3f7f9;
+    line-height: 24px;
+}
+
+.footer-top__lists {
+    padding-top: 41px;
+}
+
+.top-list,
+.bottom-list {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    width: 547px;
+    font-size: 18px;
+    font-weight: 400;
+    list-style: none;
+}
+
+.bottom-list {
+    margin-top: 38px;
+    margin-left: 22px;
+    width: 525px;
+}
+
+.top-list__link {
+    color: #f1f5f7;
+    text-decoration: none;
+    transition: all 0.1s linear;
+}
+
+.bottom-list__link { 
+    color: #ffd180;
+    text-decoration: none;
+    transition: all 0.1s linear;
+}
+
+.top-list__link:hover,
+.top-list__link:focus,
+.bottom-list__link:hover,
+.bottom-list__link:focus {
+    text-decoration: underline;
+}
+
+.top-list__link:active,
+.bottom-list__link:active {
+    text-decoration: none;
+    opacity: 0.5;
+}
+
+
 .footer-bottom {
     background-color: #293449;
 }
@@ -285,7 +412,7 @@ body {
     background-color: #ee3643;
     outline: none;
 }
-/* Какой псевдокласс отвечает за действие по клику ???????? */
+
 .social__icon {
     fill: #ffffff;
 }
@@ -328,6 +455,12 @@ body {
     transition: text-decoration .2s linear;
 }
 
-.list-info__link:hover {
+.list-info__link:hover,
+.list-info__link:focus {
     text-decoration: underline;
+}
+
+.list-info__link:active {
+    color: #ee3643;
+    text-decoration: none;
 }
