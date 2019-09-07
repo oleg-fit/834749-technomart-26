@@ -13,10 +13,232 @@ body {
     width: 960px;
 }
 
+/* ======== Header ================= */
+.header {
+    margin-top: 100px;
+}
+
+.header-top {
+    align-items: center;
+    background-color: #293449;
+}
+
+.header-top__inner {
+    display: flex;
+}
+
+.header-top__logo {
+    display: block;
+    padding: 9px 0 7px 0;
+    width: 220px;
+    font-size: 24px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    background-color: #ee3643;
+    box-shadow: 0 5px 0 0 #b52933;
+    transition: all 0.1s linear;
+}
+
+.header-top__logo:hover,
+.header-top__logo:focus {
+    background-color: #ca2c37;
+    box-shadow: 0 5px 0 0 #9a212a;
+}
+
+.header-top__logo:active {
+    background-color: #ba2732;
+    box-shadow: 0 5px 0 0 #8e1e26;
+}
+
+.header-top__search {
+    display: block;
+    padding: 10px 0;
+    width: 270px;
+    font-size: 17px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.header-top__item {
+    display: block;
+    width: 150px;
+    font-size: 17px;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.1s linear;
+}
+
+.header-top__item:hover,
+.header-top__item:focus {
+    background-color: #212a3a;
+}
+
+.header-top__item:active {
+    background-color: #161d29;
+    opacity: 0.6;
+}
+
+.header-top__bookmark {
+    padding: 11px 0 9px 44px
+}
+
+.header-top__basket {
+    padding: 11px 0 9px 49px
+}
+
+.header-top__order {
+    padding: 11px 0 9px 19px;
+    background-color: #63a63e;
+}
+
+.header-top__order:hover,
+.header-top__order:focus {
+    background-color: #5fbb2d;
+}
+
+.header-top__order:active {
+    background-color: #518534;
+    opacity: 0.5;
+}
+
+.header-top__basket_active {
+    background-color: #ee3643;
+}
+
+.header-top__basket_active:hover,
+.header-top__basket_active:focus {
+    background-color: #f10718;
+}
+
+.header-top__basket_active:active {
+    background-color: #930610;
+    opacity: 1;
+}
+
+.header-content {
+    padding-top: 32px;
+    background-color: #f2f6f8;
+}
+
+.header-content__inner {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-content__text {
+    margin-left: 52px;
+    width: 200px;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+    color: #ee3643;
+    line-height: 23px;
+}
+
+.header-content__contact {
+    margin-top: 11px;
+}
+
+.header-content__tel {
+    display: block;
+    padding: 10px 0 8px 70px;
+    width: 270px;
+    font-size: 21px;
+    color: #ee3643;
+    text-decoration: none;
+    border: 3px #ffffff solid;
+}
+
+.header-content__address {
+    margin: 7px 0 0 9px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #32425c;
+}
+
+.user-list {
+    display: flex;
+    margin: 12px 0 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.user-list__btn {
+    padding: 11px 0 10px 21px;
+    width: 121px;
+    font-size: 21px;
+    font-weight: 400;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.user-list__link {
+    display: block;
+    margin-left: 10px;
+    padding: 11px 0 10px 23px;
+    width: 150px;
+    font-size: 21px;
+    font-weight: 400;
+    color: #000000;
+    text-decoration: none;
+    background-color: #ffffff;
+    transition: all 0.1s linear;
+}
+
+.user-list__btn:hover,
+.user-list__btn:focus,
+.user-list__link:hover,
+.user-list__link:focus {
+    color: #ee3643;
+}
+
+/* Тут opacity: 0.3; как то не так работает изменяет background-color */
+/* Или тут цвет проще поменять */
+.user-list__btn:active,
+.user-list__link:active {
+    opacity: 0.3;
+}
+
+.main-nav {
+    padding: 23px 0 60px 0;
+    background-color: #f3f7f8;
+}
 
 
+.main-nav__list {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    background-color: #32425c;
+    border-bottom: 5px #293449 solid;
+}
 
+.main-nav__link {
+    display: block;
+    padding: 19px 31px 17px 31px;
+    font-size: 17px;
+    font-weight: 400;
+    color: #ffffff;
+    text-decoration: none;
+}
 
+.main-nav__link:hover,
+.main-nav__link:focus {
+    background-color: #293449;
+}
+
+.main-nav__link:hover:active {
+    background-color: #1d2739;
+    opacity: 0.5;
+}
 
 /* ======== Footer ================= */
 .footer-bottom {
