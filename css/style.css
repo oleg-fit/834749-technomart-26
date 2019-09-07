@@ -220,6 +220,12 @@ body {
     background-color: #ffffff;
 }
 
+.user-block__name:active {
+    /* Тут так же  фон меняеться */
+    opacity: 0.3;
+}
+
+
 .user-block__links {
     margin-left: 15px;
 }
@@ -227,7 +233,19 @@ body {
 .user-block__link {
     font-size: 16px;
     color: #32425c;
+    transition: all 0.2s linear;
 }
+
+.user-block__link:hover,
+.user-block__link:focus {
+    color: #ee3643;
+}
+
+.user-block__link:active {
+    color: #32425c;
+    opacity: 0.3;
+}
+
 
 .user-block__link:first-child {
     margin-right: 28px;
@@ -268,6 +286,148 @@ body {
     background-color: #1d2739;
     opacity: 0.5;
 }
+
+/* ======== Popular-goods ================= */
+
+.goods-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    font-weight: 700;
+    font-family: 'PT Sans', sans-serif;
+    list-style: none;
+}
+
+.goods-list__item {
+    margin-bottom: 20px;
+    padding-bottom: 18px;
+    width: 220px;
+    text-align: center;
+    border: 1px #e5e5e5 solid;
+    position: relative;
+    transition: all 0.2s linear;
+}
+
+.new-flag {
+    background: url(../img/popular-goods/new_flag_copy.png) no-repeat;
+    width: 60px;
+    height: 59px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 100;
+}
+
+.goods-list__title {
+    margin: 5px auto 11px;
+    width: 160px;
+    font-size: 18px;
+    color: #000000;
+}
+
+.goods-list__oldPrice {
+    display: block;
+    margin-bottom: 9px;
+    font-size: 17px;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+.goods-list__price {
+    margin-left: 42px;
+    padding: 10px 0 10px 35px;
+    width: 122px;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: left;
+    text-transform: uppercase;
+    background-color: #ee3643;
+    border-radius: 3px;
+    position: relative;
+}
+
+.goods-list__price::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border: 20px solid #ffffff;
+    border-left-color: #ee3643;
+    position: absolute;
+    top: 0px;
+    right: -38px;
+    border-radius: 3px;
+}
+
+.goods-list__active {
+    padding-top: 10px;
+    background-color: #ffffff;
+    z-index: -100;
+    position: absolute;
+    top: 33px;
+    right: 0;
+    transition: all 0.2s linear;
+}
+
+.goods-list__item:hover {
+    /* Не знаю как правильно тень посмотреть */
+    box-shadow: 0 10px 20px 5px #c0c0c0;
+    border: 0;
+}
+
+.goods-list__item:hover .goods-list__active {
+    z-index: 5;
+}
+
+.goods-list__buy,
+.goods-list__bookmark {
+    padding: 11px 0 8px 3px;
+    width: 135px;
+    font-size: 14px;
+    font-family: 'Cuprum', sans-serif;
+    color: #ffffff;
+    text-transform: uppercase;
+    background-color: #63a63e;
+    outline: none;
+    border: none;
+    border-bottom: 3px #367315 solid;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.1s linear;
+}
+
+.goods-list__buy {
+    margin-bottom: 8px;
+}
+
+.goods-list__buy:hover,
+.goods-list__buy:focus {
+    background-color: #5fbb2d;
+}
+
+.goods-list__buy:active {
+    background-color: #518534;
+    border-bottom: 3px #518534 solid;
+}
+
+.goods-list__bookmark {
+    padding: 10px 0 8px 3px;
+    color: #32425c;
+    background-color: #ffffff;
+    border: 3px #63a63e solid;
+}
+
+.goods-list__bookmark:hover,
+.goods-list__bookmark:focus {
+    border: 3px #32425c solid;
+}
+
+.goods-list__bookmark:active {
+    opacity: 0.3;
+}
+
+
 
 /* ======== About-perforator ================= */
 .about-perforator {
@@ -463,4 +623,18 @@ body {
 .list-info__link:active {
     color: #ee3643;
     text-decoration: none;
+}
+
+/* ======== Catalog ================= */
+.catalog-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.catalog-filter {
+    width: 220px;
+}
+
+.catalog-sort {
+    width: 700px;
 }
