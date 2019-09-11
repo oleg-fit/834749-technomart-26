@@ -334,6 +334,7 @@ body {
 
 .features__item_yelow {
     background-color: #ffbf47;
+    background-image: url(../img/features/icon-1.svg);
 }
 
 .features__item_blue {
