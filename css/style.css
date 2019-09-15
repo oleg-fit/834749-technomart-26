@@ -16,8 +16,16 @@ body {
     width: 960px;
 }
 
-.hidden {
-    display: none;
+/* ======== Visually-hidden ========= */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
 }
 
 /* ======== Btn-red ================= */
@@ -94,13 +102,46 @@ body {
     box-shadow: 0 5px 0 0 #8e1e26;
 }
 
-.header-top__search {
-    display: block;
-    padding: 10px 0;
+.search-block {
     width: 270px;
+    position: relative;
+}
+
+/* Я тут перестал понимать, что должно на что наводиться))  */
+.search-block__label:hover .search-block__input{
+    background-color: #212a3a;
+}
+
+.search-block__label:hover .search-block__svg {
+    opacity: 1;
+}
+
+.search-block__input {
+    padding-left: 100px;
+    width: 100%;
+    height: 100%;
+    background-color: #293449;
+    border: transparent;
+    outline: none;
+}
+
+.search-block__input:focus {
+    background-color: #fff;
+}
+
+.search-block__span {
     font-size: 17px;
     color: #ffffff;
-    text-decoration: none;
+    position: absolute;
+    top: 11px;
+    left: 48px;
+}
+
+.search-block__svg {
+    opacity: 0.3;
+    position: absolute;
+    top: 13px;
+    left: 17px;
 }
 
 .header-top__item {
@@ -433,6 +474,10 @@ body {
     position: relative;
 }
 
+.features__item_new {
+    background: url(../img/new/new_flag_copy.png) top right no-repeat;
+}
+
 .features__item_yelow {
     background-color: #ffbf47;
 }
@@ -582,7 +627,6 @@ body {
 
 .goods-list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
     padding: 0;
@@ -592,8 +636,10 @@ body {
 }
 
 .goods-list__item {
+    display: flex;
+    flex-direction: column;
     margin-bottom: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 23px;
     width: 220px;
     text-align: center;
     border: 1px #e5e5e5 solid;
@@ -601,8 +647,31 @@ body {
     transition: all 0.1s linear;
 }
 
+.popular-goods .goods-list__item {
+    margin-right: 20px;
+}
+
+.popular-goods .goods-list__item:nth-child(4n) {
+    margin-right: 0;
+}
+
+.catalog .goods-list__item {
+    margin-right: 20px;
+}
+
+.catalog .goods-list__item:nth-child(3n) {
+    margin-right: 0;
+}
+
+
+/* Не понимаю почему тут не получаеться */
+.goods-list__item_new {
+    background: url(../img/new/new_flag_copy.png) top right no-repeat;
+}
+
+
 .goods-list__title {
-    margin: 5px auto 11px;
+    margin: 8px auto 11px;
     width: 160px;
     font-size: 18px;
 }
@@ -616,6 +685,7 @@ body {
 }
 
 .goods-list__price {
+    margin-top: auto;
     margin-left: 42px;
     padding: 10px 0 10px 35px;
     width: 122px;
@@ -652,7 +722,7 @@ body {
 
 .goods-list__item:hover {
     box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
-    border: 0;
+    border-color: transparent;
 }
 
 .goods-list__item:hover .goods-list__active {
@@ -731,18 +801,17 @@ body {
 .manufacturer-list__item:hover,
 .manufacturer-list__item:focus {
     box-shadow: 0 10px 25px rgba(41, 52, 73, 0.5);
-    border: 0;
+    border: transparent;
 }
 
 .manufacturer-list__item:active {
     box-shadow: 0 4px 10px rgba(41, 52, 73, 0.5);
-    border: 0;
+    border: transparent;
 }
 
 .manufacturer-list__item:active .manufacturer-list__img {
     opacity: 0.3;
 }
-
 
 /* ======== About-perforator ================= */
 .about-perforator {
@@ -1051,6 +1120,7 @@ body {
     background-color: #212a3a;
     border-radius: 50%;
     transition: background-color 0.1s linear;
+    position: relative;
 }
 
 .social__item:hover,
@@ -1059,20 +1129,34 @@ body {
     outline: none;
 }
 
-.social__icon {
-    fill: #ffffff;
+.social__item:active {
+    background-color: #ee3643;
+    outline: none;
 }
 
-.social__icon_vk {
-    height: 27px;
+.social__item_vk::before {
+    content: '';
+    width: 26px;
+    height: 15px;
+    background-image: url(../img/footer/vk.svg);
+    position: absolute;
+
 }
 
-.social__icon_facebook {
+.social__item_fb::before {
+    content: '';
+    width: 12px;
     height: 22px;
+    background-image: url(../img/footer/fb.svg);
+    position: absolute;
 }
 
-.social__icon_in {
-    height: 20px;
+.social__item_in::before {
+    content: '';
+    width: 21px;
+    height: 21px;
+    background-image: url(../img/footer/insta.svg);
+    position: absolute;
 }
 
 .list-info {
@@ -1167,13 +1251,146 @@ body {
     width: 220px;
 }
 
+.catalog-filter__title {
+    margin: 0;
+    padding: 12px 0 12px 19px;
+    width: 100%;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    background-color: #f7f3ec;
+    border-radius: 3px;
+}
+  
+.form-sort fieldset {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+.form-sort legend {
+    margin-bottom: 23px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.filter-manufacturers, 
+.filter-power {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.filter-manufacturers__item,
+.filter-power__item {
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.filter-manufacturers__label,
+.filter-power__label,
+.btn-filter {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.filter-manufacturers__label {
+    margin-left: 34px;
+}
+
+.filter-manufacturers__checkbox {
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/catalog/checkbox-off.svg);
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+
+/* Не понимаю тут текст должен меняться по ховеру? */
+.filter-manufacturers__input:checked + .filter-manufacturers__checkbox {
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/catalog/checkbox-on.svg);
+}
+
+.filter-manufacturers__input:focus + .filter-manufacturers__checkbox {
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/catalog/checkbox-off-focus.svg);
+}
+
+.filter-manufacturers__input:checked:focus + .filter-manufacturers__checkbox {
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/catalog/checkbox-on-focus.svg);
+}
+
+.filter-manufacturers__input:disabled + .filter-manufacturers__checkbox {
+    width: 23px;
+    height: 23px;
+    background-image: url(../img/catalog/checkbox-off-focus.svg);
+    opacity: 0.3;
+}
+
+.filter-manufacturers__input:checked:disabled  + .filter-manufacturers__checkbox {
+    width: 27px;
+    height: 23px;
+    background-image: url(../img/catalog/checkbox-on-focus.svg);
+    opacity: 0.3;
+}
+
+.filter-power__label {
+    margin-left: 34px;
+}
+
+.filter-power__radio {
+    width: 25px;
+    height: 25px;
+    background-image: url(../img/catalog/radio-off.svg);
+    position: absolute;
+    top: -3px;
+    left: 0;
+}
+
+.filter-power__input:checked + .filter-power__radio {
+    background-image: url(../img/catalog/radio-on.svg);
+}
+
+.filter-power__input:focus + .filter-power__radio {
+    background-image: url(../img/catalog/radio-off-focus.svg);
+}
+
+.filter-power__input:checked:focus + .filter-power__radio {
+    background-image: url(../img/catalog/radio-on-focus.svg);
+}
+
+.filter-power__input:disabled + .filter-power__radio {
+    background-image: url(../img/catalog/radio-off-focus.svg);
+    opacity: 0.3;
+}
+
+.filter-power__input:checked:disabled + .filter-power__radio {
+    background-image: url(../img/catalog/radio-on-focus.svg);
+    opacity: 0.3;
+}
+
+.btn-filter {
+    font-size: 13px;
+    background-color: #ffffff;
+    border: 1px #e5e5e5 solid;
+}
+
 .catalog-sort {
     width: 700px;
 }
 
 .catalog-sort__inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
     padding: 10px 0;
@@ -1190,25 +1407,52 @@ body {
 
 .list-type {
     display: flex;
-    justify-content: space-between;
     margin: 0;
     padding: 0;
-    width: 355px;
     list-style: none;
 }
 
 .list-type__link {
+    font-family: 'PT Sans', sans-serif;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
     text-decoration: none;
+    border-bottom: 1px #ee3643 dotted;
 }
 
 .list-arrow {
     display: flex;
     justify-content: space-between;
     margin: 0;
+    margin-left: auto;
     padding: 0 16px 0 0;
     width: 59px;
     list-style: none;
+}
+
+/* ======== Write-us============ */
+
+
+/* ======== Map ================= */
+.map {
+    display: none;
+}
+
+.map__inner {
+    position: relative;
+}
+
+.map-content {
+    box-shadow: 0px 0px 14.72px 1.28px rgba(47, 42, 43, 0.5);
+}
+
+.map-content img {
+    display: block;
+}
+
+.map__btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
