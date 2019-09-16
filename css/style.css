@@ -79,7 +79,7 @@ body {
 
 .header-top__logo {
     display: block;
-    padding: 9px 0 7px 0;
+    padding: 10px 0 5px 0;
     width: 220px;
     font-size: 24px;
     color: #ffffff;
@@ -315,7 +315,7 @@ body {
 
 .user-list__icon-login {
     position: absolute;
-    top: 16px;
+    top: 14px;
     left: 14px;
     fill: #cccccc;
     transition: all 0.1s linear;
@@ -352,7 +352,7 @@ body {
 
 .user-block__name {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     padding: 10px 67px 10px 45px;
     font-size: 21px;
     text-decoration: none;
@@ -432,7 +432,7 @@ body {
 
 .main-nav__link {
     display: block;
-    padding: 19px 31px 17px 30px;
+    padding: 20px 31px 16px 30px;
     font-size: 17px;
     color: #ffffff;
     text-decoration: none;
@@ -450,7 +450,7 @@ body {
 
 /* ======== Features ================= */
 .features {
-    padding: 59px 0 32px 0;
+    padding: 60px 0 33px 0;
 }
 
 .features__inner {
@@ -469,7 +469,7 @@ body {
 
 .features__item {
     margin-bottom: 20px;
-    padding: 22px 0 21px 23px;
+    padding: 21px 0 23px 22px;
     width: 300px;
     position: relative;
 }
@@ -549,7 +549,7 @@ body {
 }
 
 .features__title{
-    margin: 0 0 15px 0;
+    margin: 0 0 14px 0;
     font-size: 24px;
     color: #ffffff;
 }
@@ -639,7 +639,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    padding-bottom: 23px;
+    padding-bottom: 20px;
     width: 220px;
     text-align: center;
     border: 1px #e5e5e5 solid;
@@ -782,7 +782,7 @@ body {
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
-    margin: 22px 0 63px 0;
+    margin: 22px 0 65px 0;
     padding: 0;
     list-style: none;
 }
@@ -815,20 +815,22 @@ body {
 
 /* ======== About-perforator ================= */
 .about-perforator {
-    padding: 39px 0 57px 0;
+    padding: 39px 0 54px 0;
     background-color: #f2f6f8;
 }
 
 .about-perforator__title {
     margin-top: 22px;
-    margin-bottom: 22px;
+    margin-bottom: 25px;
     font-size: 30px;
+    letter-spacing: -0.5px;
 }
 
 .about-perforator__text {
     font-size: 13px;
     font-family: 'PT Sans', sans-serif;
     line-height: 24px;
+    letter-spacing: 0.05px;
 }
 
 /* ======== Advantage ================= */
@@ -837,11 +839,8 @@ body {
 }
 
 .advantage__inner {
+    padding: 58px 0 98px 0;
     background: url(../img/advantage/car.png) no-repeat right bottom;
-}
-
-.advantage__inner {
-    padding: 62px 0 98px 0;
 }
 
 .service {
@@ -927,7 +926,7 @@ body {
 /* ======== information ================= */
 .information {
     padding-top: 52px;
-    padding-bottom: 86px;
+    padding-bottom: 85px;
 }
 
 .information__inner {
@@ -936,7 +935,7 @@ body {
 }
 
 .information-contant__title {
-    margin-bottom: 24px;
+    margin-bottom: 26px;
     font-size: 30px;
     font-weight: 400;
     text-transform: uppercase;
@@ -948,12 +947,14 @@ body {
     font-family: 'PT Sans', sans-serif;
     font-size: 13px;
     line-height: 24px;
+    letter-spacing: 0.11px;
 }
 
 .information-contant__text_width {
     margin-bottom: 20px;
     font-family: 'PT Sans', sans-serif;
-    width: 390px;
+    width: 400px;
+    letter-spacing: 0.03px;
 }
 
 .transport-list {
@@ -1004,7 +1005,7 @@ body {
 }
 
 .information-contact__link {
-    margin-top: 35px;
+    margin-top: 37px;
     width: 300px;
     padding: 11px 0 11px 5px;
 }
@@ -1233,7 +1234,7 @@ body {
 }
 
 .catalog-header__title {
-    margin-top: 22px;
+    margin: 22px 0 20px 0;
     padding: 27px 28px;
     font-size: 30px;
     font-weight: 400;
@@ -1263,13 +1264,13 @@ body {
 }
   
 .form-sort fieldset {
-    margin: 0;
+    margin: 0 0 24px 0;
     padding: 0;
     border: none;
 }
 
 .form-sort legend {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     font-family: 'PT Sans', sans-serif;
     font-size: 17px;
     font-weight: 700;
@@ -1380,9 +1381,14 @@ body {
 }
 
 .btn-filter {
+    margin-top: 34px;
+    padding: 11px 0;
+    width: 140px;
     font-size: 13px;
+    text-align: center;
     background-color: #ffffff;
     border: 1px #e5e5e5 solid;
+    border-radius: 3px;
 }
 
 .catalog-sort {
@@ -1395,6 +1401,7 @@ body {
     margin-bottom: 20px;
     padding: 10px 0;
     background-color: #f7f3ec;
+    border-radius: 3px;
 }
 
 .catalog-sort__title {
@@ -1407,8 +1414,10 @@ body {
 
 .list-type {
     display: flex;
-    margin: 0;
-    padding: 0;
+    justify-content: space-between;
+    margin: 0 0 0 139px;
+    padding: 0 47px 0 0;
+    width: 400px;
     list-style: none;
 }
 
@@ -1419,6 +1428,19 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     border-bottom: 1px #ee3643 dotted;
+    transition: all 0.1s linear;
+}
+
+.list-type__link:hover,
+.list-type__link:focus {
+    color: #000000;
+    border-bottom: 1px #ee3643 solid;
+}
+
+.list-type__link_active,
+.list-type__link:focus {
+    color: #ee3643;
+    border-bottom: transparent;
 }
 
 .list-arrow {
@@ -1429,6 +1451,76 @@ body {
     padding: 0 16px 0 0;
     width: 59px;
     list-style: none;
+}
+
+.list-arrow__link {
+    fill: #c5c5c5;
+}
+
+.list-arrow__link:hover,
+.list-arrow__link:focus {
+    fill: #231f20;
+}
+
+.list-arrow__link:active {
+    fill: #ee3643;
+}
+
+.list-arrow__link_active {
+    fill: #ee3643;
+}
+
+.list-tab__wraper {
+    display: flex;
+    margin: 32px 0 61px 0;
+    align-items: center;
+}
+
+.list-tab {
+    display:flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.list-tab__link {
+    display: block;
+    margin-right: 10px;
+    padding: 11px 0;
+    width: 38px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
+    color: #000;
+    text-align: center;
+    text-decoration: none;
+    border: 1px #e5e5e5 solid;
+    border-radius: 3px;
+    transition: all 0.1s linear;
+}
+
+.list-tab__link:hover,
+.list-tab__link:focus {
+    border: 1px #bdc6ca solid;
+}
+
+.list-tab__link:active {
+    border: 1px #ee3643 solid;
+}
+
+.list-tab__link_next {
+    width: 140px;
+    text-transform: uppercase;
+}
+
+.list-tab__link_active {
+    color: #ffffff;
+    background-color: #ee3643;
+    border: transparent;
+}
+
+.list-tab__link_active:hover,
+.list-tab__link_active:focus {
+    border: transparent;
 }
 
 /* ======== Write-us============ */
