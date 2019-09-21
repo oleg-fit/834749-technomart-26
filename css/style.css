@@ -66,19 +66,6 @@ a {
     background-color: #ba2732;
 }
 
-/* ======== New-flag ================= */
-.new-flag {
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 100;
-
-    width: 60px;
-    height: 59px;
-
-    background: url(../img/popular-goods/new_flag_copy.png) no-repeat;
-}
-
 /* ======== Header ================= */
 .header {
     margin-top: 100px;
@@ -120,6 +107,10 @@ a {
 .header-top__logo:active {
     background-color: #ba2732;
     box-shadow: 0 5px 0 0 #8e1e26;
+}
+
+.header-top__logo svg {
+    fill: #ffffff;
 }
 
 .search-block {
@@ -280,7 +271,7 @@ a {
 }
 
 .header-content {
-    padding-top: 32px;
+    padding-top: 33px;
 
     background-color: #f2f6f8;
 }
@@ -303,6 +294,8 @@ a {
 
 .header-content__contact {
     margin-top: 11px;
+
+    font-style: normal;
 }
 
 .header-content__tel {
@@ -313,7 +306,7 @@ a {
 
     padding-top: 10px;
     padding-bottom: 8px;
-    padding-left: 70px;
+    padding-left: 71px;
     
     font-size: 21px;
     color: #ee3643;
@@ -416,7 +409,7 @@ a {
 
     display: block;
 
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     padding-top: 10px;
     padding-right: 67px;
     padding-bottom: 10px;
@@ -485,7 +478,7 @@ a {
 }
 
 .main-nav {
-    padding-top: 25px;
+    padding-top: 24px;
     padding-bottom: 60px;
 
     background-color: #f3f7f8;
@@ -751,7 +744,7 @@ a {
     flex-direction: column;
     width: 220px;
     margin-bottom: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 19px;
 
     text-align: center;
     border: 1px #e5e5e5 solid;
@@ -788,11 +781,6 @@ a {
     margin-right: 0;
 }
 
-.goods-list__item_new {
-    background: url(../img/new/new_flag_copy.png) top right no-repeat;
-}
-
-
 .goods-list__title {
     width: 160px;
     margin-top: 8px;
@@ -805,7 +793,7 @@ a {
 
 .goods-list__oldprice {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 7px;
     margin-left: 3px;
 
     font-size: 17px;
@@ -926,11 +914,15 @@ a {
 }
 
 /* ======== Popular-manufacturer ================= */
+.popular-manufacturer {
+    padding-top: 2px;
+}
+
 .manufacturer-list {
     display: flex;
     justify-content:space-between;
     flex-wrap: wrap;
-    margin-top: 22px;
+    margin-top: 20px;
     margin-bottom: 65px;
     padding: 0;
 
@@ -973,8 +965,6 @@ a {
 .advantage__inner {
     padding-top: 58px;
     padding-bottom: 98px;
-
-    background: url(../img/advantage/car.png) no-repeat right bottom;
 }
 
 .service {
@@ -998,11 +988,13 @@ a {
     line-height: 24px;
 }
 
-.delivery {
+.tab {
+    position: relative;
+
     display: flex;
 }
 
-.delivery-list {
+.tab-labels {
     position: relative;
 
     margin-top: 11px;
@@ -1013,7 +1005,7 @@ a {
     list-style: none;
 }
 
-.delivery-list::after {
+.tab-labels::after {
     content: "";
     position: absolute;
     top: -46px;
@@ -1025,11 +1017,22 @@ a {
     background: url('../img/advantage/shadow.png') no-repeat;
 }
 
-.delivery-contant {
-    margin-top: 5px;
+.tab__input[id="delivery"]:checked ~ .tab-labels .tab-labels__item[for="delivery"],
+.tab__input[id="guarantee"]:checked ~ .tab-labels .tab-labels__item[for="guarantee"],
+.tab__input[id="credit"]:checked ~ .tab-labels .tab-labels__item[for="credit"] {
+    color: #333366;
+
+    background: #ffffff;
+    border: transparent;
 }
 
-.delivery-list__link {
+.tab__input[id="delivery"]:checked ~ .tab-content .delivery,
+.tab__input[id="guarantee"]:checked ~ .tab-content .guarantee,
+.tab__input[id="credit"]:checked ~ .tab-content .credit {
+    display: block;
+}
+
+.tab-labels__item {
     display: block;
     width: 240px;
     padding-top: 17px;
@@ -1043,25 +1046,73 @@ a {
     background: #32425c;
     border-top: 1px #405069 solid;
     border-bottom: 1px #293449 solid;
+    cursor: pointer;
 }
 
-.delivery-list__link_active {
-    color: #333366;
+.tab-content {
+    position: relative;
 
-    background: #ffffff;
-    border: transparent;
+    width: 620px;
+    margin-top: 5px;
 }
 
-.delivery-contant__title {
+.delivery,
+.guarantee,
+.credit {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: none;
+    width: 100%;
+}
+
+.delivery::after {
+    content: '';
+    position: absolute;
+    top: 27px;
+    right: 0;
+
+    width: 468px;
+    height: 261px;
+
+    background: url(../img/advantage/car.png) no-repeat;
+}
+
+.guarantee::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    right: -9px;
+
+    width: 389px;
+    height: 283px;
+
+    background: url(../img/advantage/sing.png) no-repeat;
+}
+
+.credit::after {
+    content: '';
+    position: absolute;
+    top: 4px;
+    right: -10px;
+
+    width: 465px;
+    height: 285px;
+
+    background: url(../img/advantage/money.png) no-repeat;
+}
+
+.tab-content__title {
     margin: 0;
 
     font-size: 36px;
     font-weight: 400;
-    color: #333366;
+    color: #32425c;
     text-transform: uppercase;
 }
 
-.delivery-contant__text {
+.tab-content__text {
     width: 275px;
     margin-top: 22px;
     
@@ -1069,6 +1120,20 @@ a {
     font-size: 13px;
     color: #000000;
     line-height: 24px;
+}
+
+.guarantee .tab-content__text {
+    width: 375px;
+}
+
+.credit .tab-content__text {
+    width: 280px;
+    margin-top: 24px;
+    margin-bottom: 27px;
+}
+
+.credit .btn-red {
+    width: 195px;
 }
 
 /* ======== information ================= */
@@ -1377,7 +1442,7 @@ a {
     left: 50%;
     z-index: 1000;
 
-    /* display: none; */
+    display: none;
 
     transform: translate(-50%, -50%);
     background-color: #ffffff;
@@ -1529,7 +1594,7 @@ a {
 .catalog-header__item::after {
     content: "";
     position: absolute;
-    top: -1px;
+    top: 0;
     right: -24px;
 
     width: 8px;
@@ -1775,6 +1840,8 @@ a {
 }
 
 .list-type__link {
+    display: block;
+
     font-family: 'PT Sans', sans-serif;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.3);
@@ -1848,7 +1915,7 @@ a {
     display: block;
     width: 38px;
     margin-right: 10px;
-    padding-top: 11px;
+    padding-top: 12px;
     padding-bottom: 11px;
    
     font-family: 'PT Sans', sans-serif;
@@ -1886,6 +1953,10 @@ a {
 .list-tab__link_active:hover,
 .list-tab__link_active:focus {
     border: transparent;
+}
+
+.catalog-page .goods-list__item {
+    padding-bottom: 20px;
 }
 
 /* ======== About-perforator ================= */
