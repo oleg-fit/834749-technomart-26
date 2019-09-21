@@ -119,35 +119,31 @@ a {
     width: 270px;
 }
 
-/* Я тут перестал понимать, что должно на что наводиться))  */
-.search-block__label:hover .search-block__input{
-    background-color: #212a3a;
+.search-block__label:hover .search-block__svg {
+    opacity: 1;
 }
 
-.search-block__label:hover .search-block__svg {
+.search-block__input:focus {
+    background-color: #ffffff;
+}
+
+.search-block__input:focus ~ .search-block__svg {
+    fill: #ee3643;
     opacity: 1;
 }
 
 .search-block__input {
     width: 100%;
     height: 100%;
-    padding-left: 100px;
-    
-    background-color: #293449;
-    border: transparent;
-    outline: none;
-}
-
-.search-block__input:focus {
-    background-color: #fff;
-}
-
-.search-block__span {
-    position: absolute;
-    top: 11px;
-    left: 48px;
+    padding-left: 48px;
 
     font-size: 17px;
+
+    background-color: #293449;
+    border: transparent;
+}
+
+.search-block__input::placeholder {
     color: #ffffff;
 }
 
@@ -156,6 +152,7 @@ a {
     top: 13px;
     left: 17px;
 
+    fill: #ffffff;
     opacity: 0.3;
 }
 
@@ -1655,9 +1652,15 @@ a {
     background-color: #f7f3ec;
     border-radius: 3px;
 }
+
+.form-sort {
+    margin-top: 17px;
+}
   
 .form-sort fieldset {
-    margin-bottom: 24px;
+    position: relative;
+
+    margin-bottom: 48px;
     margin-right: 0;
     margin-left: 0;
     padding: 0;
@@ -1665,14 +1668,128 @@ a {
     border: none;
 }
 
+.form-sort fieldset:nth-child(2) {
+    margin-bottom: 24px;
+}
+
+.form-sort fieldset:nth-child(2)::before,
+.form-sort fieldset:nth-child(3)::before {
+    content: "";
+    position: absolute;
+    top: -24px;
+    right: 0;
+
+    width: 220px;
+    height: 1px;
+
+    background-color: #e5e5e5;
+}
+
 .form-sort legend {
-    margin-bottom: 21px;
+    margin-bottom: 20px;
 
     font-family: 'PT Sans', sans-serif;
     font-size: 17px;
     font-weight: 700;
     text-transform: uppercase;
 }
+
+  .range-filter {
+    width: 220px;
+  }
+  
+  .filter-item legend {
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .range-controls {
+    position: relative;
+    
+    height: 80px;
+    margin-bottom: 10px;
+    padding-top: 39px;
+    padding-right: 20px;
+    padding-left: 20px;
+    
+    background-color: #f7f3ec;
+    
+    border-radius: 5px;
+  }
+  
+  .range-controls .scale {
+    height: 2px;
+  
+    background: #d7dcde;
+  }
+  
+  .range-controls .bar {
+    width: 80%;
+    height: 2px;
+  
+    background: #00ca74;
+  }
+  
+  .range-controls .toggle {
+    position: absolute;
+    top: 31px;
+    left: 0;
+    
+    width: 20px;
+    height: 20px;
+    padding: 0;
+  
+    border: 8px solid #ffffff;
+    background-color: #ababab;
+    box-shadow: 0 2px 1px 0 #cfcfcf;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .range-controls .toggle-min {
+    left: 19px;
+  }
+  
+  .range-controls .toggle-max {
+    left: 160px;
+  }
+  
+  .price-controls {
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 0;
+  }
+  
+  .price-controls label {
+    display: inline-block;
+    
+    
+    font-size: 16px;
+    text-transform: uppercase;
+  }
+  
+  .price-controls input {
+    width: 95px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    padding-left: 4px;
+    
+    font-family: 'PT Sans', sans-serif;
+    font-size: 17px;
+    text-align: center;
+    color: #000000;
+    
+    border: none;
+    border-radius: 3px;
+    background: #f7f3ec;
+  }
+  
+  .max-price {
+    text-align: right;
+  }
 
 .filter-manufacturers, 
 .filter-power {
@@ -1790,7 +1907,7 @@ a {
 
 .btn-filter {
     width: 140px;
-    margin-top: 34px;
+    margin-top: 10px;
     padding-top: 11px;
     padding-bottom: 11px;
     
