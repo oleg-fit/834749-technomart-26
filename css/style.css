@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
 
-    font-family: 'Cuprum', sans-serif;
+    font-family: 'Cuprum', Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
     color: #000000;
@@ -474,6 +474,23 @@ a {
     margin-right: 28px;
 }
 
+.user-block__link:nth-child(2) {
+    position: relative;
+}
+
+.user-block__link:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: -16px;
+    
+    width: 4px;
+    height: 5px;
+
+    background-color: #32425c;
+    border-radius: 50%;
+}
+
 .main-nav {
     padding-top: 24px;
     padding-bottom: 60px;
@@ -729,7 +746,7 @@ a {
     padding: 0;
 
     font-weight: 700;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
 
     list-style: none;
 }
@@ -980,7 +997,7 @@ a {
 
 .service-text {
     width: 400px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
 }
@@ -1012,6 +1029,12 @@ a {
     height: 272px;
 
     background: url('../img/advantage/shadow.png') no-repeat;
+}
+
+.tab__input[id="delivery"]:hover ~ .tab-labels .tab-labels__item[for="delivery"],
+.tab__input[id="guarantee"]:hover ~ .tab-labels .tab-labels__item[for="guarantee"],
+.tab__input[id="credit"]:hover ~ .tab-labels .tab-labels__item[for="credit"] {
+   background-color: #293449;
 }
 
 .tab__input[id="delivery"]:checked ~ .tab-labels .tab-labels__item[for="delivery"],
@@ -1113,7 +1136,7 @@ a {
     width: 275px;
     margin-top: 22px;
     
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     color: #000000;
     line-height: 24px;
@@ -1156,7 +1179,7 @@ a {
     width: 530px;
     margin-bottom: 24px;
     
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
     letter-spacing: 0.11px;
@@ -1166,7 +1189,7 @@ a {
     width: 400px;
     margin-bottom: 20px;
 
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     letter-spacing: 0.03px;
 }
 
@@ -1218,7 +1241,7 @@ a {
     width: 180px;
     margin-bottom: 31px;
 
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     line-height: 24px;
 }
@@ -1483,7 +1506,7 @@ a {
 .write-us__textarea {
     width: 100%;
 
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     color: #a9a9a9;
 
@@ -1607,7 +1630,7 @@ a {
 .catalog-header__link {
     display: block;
 
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     color: #000000;
     text-transform: uppercase;
@@ -1645,7 +1668,7 @@ a {
     padding-bottom: 12px;
     padding-left: 19px;
     
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     text-transform: uppercase;
 
@@ -1688,7 +1711,7 @@ a {
 .form-sort legend {
     margin-bottom: 20px;
 
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 17px;
     font-weight: 700;
     text-transform: uppercase;
@@ -1777,7 +1800,7 @@ a {
     padding-bottom: 10px;
     padding-left: 4px;
     
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 17px;
     text-align: center;
     color: #000000;
@@ -1809,7 +1832,7 @@ a {
 .filter-manufacturers__label,
 .filter-power__label,
 .btn-filter {
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 15px;
     color: #000000;
     text-transform: uppercase;
@@ -1938,7 +1961,7 @@ a {
     margin: 0;
     padding-left: 20px;
 
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     text-transform: uppercase;
 }
@@ -1959,7 +1982,7 @@ a {
 .list-type__link {
     display: block;
 
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     color: rgba(0, 0, 0, 0.3);
     text-transform: uppercase;
@@ -2035,7 +2058,7 @@ a {
     padding-top: 12px;
     padding-bottom: 11px;
    
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     font-size: 13px;
     color: #000;
     text-align: center;
@@ -2094,8 +2117,123 @@ a {
 
 .about-perforator__text {
     font-size: 13px;
-    font-family: 'PT Sans', sans-serif;
+    font-family: 'PT Sans', Arial, sans-serif;
     line-height: 24px;
     letter-spacing: 0.05px;
 }
+
+/* ======== Adding-goods ================= */
+.adding-goods {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1000;
+
+    display: none;
+    width: 620px;
+
+    background-color: #ffffff;
+    border-top: 7px solid #ee3643;
+    box-shadow: 0 20px 45px rgba(41, 52, 73, 0.75);
+
+    transform: translate(-50%, -50%);
+}
+
+.adding-goods__content {
+    display: flex;
+    margin-left: 80px;
+    padding-top: 39px;
+    padding-bottom: 42px;
+
+    align-items: center;
+}
+  
+.adding-goods__img {
+    margin-right: 34px;
+}
+
+.adding-goods__title {
+    font-size: 30px;
+    color: #000000;
+}
+
+.adding-goods_btns {
+    display: flex;
+    padding-top: 37px;
+    padding-bottom: 37px;
+
+    background-color: #f1f1f1;
+}
+
+.adding-goods_btn {
+    width: 220px;
+}
+
+.adding-goods_btn:first-child {
+    margin-right: 20px;
+    margin-left: 80px;
+}
+
+.adding-goods_btn:nth-child(2) {
+    display: block;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 14px;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    border-radius: 3px;
+    transition: all 0.1s linear;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
