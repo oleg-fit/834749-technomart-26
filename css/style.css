@@ -67,10 +67,6 @@ a {
 }
 
 /* ======== Header ================= */
-.header {
-    margin-top: 100px;
-}
-
 .header-top {
     align-items: center;
 
@@ -1255,10 +1251,6 @@ a {
 }
 
 /* ======== Footer ================= */
-.footer {
-    margin-bottom: 100px;
-}
-
 .footer-top {
     padding-bottom: 29px;
     background-color: #32425c;
@@ -1392,6 +1384,8 @@ a {
 .social__item_vk::before {
     content: '';
     position: absolute;
+    top: calc(50% - 15px/2);
+    left: calc(50% - 26px/2);
 
     width: 26px;
     height: 15px;
@@ -1402,6 +1396,8 @@ a {
 .social__item_fb::before {
     content: '';
     position: absolute;
+    top: calc(50% - 22px/2);
+    left: calc(50% - 12px/2);
 
     width: 12px;
     height: 22px;
@@ -1412,6 +1408,8 @@ a {
 .social__item_in::before {
     content: '';
     position: absolute;
+    top: calc(50% - 21px/2);
+    left: calc(50% - 21px/2);
 
     width: 21px;
     height: 21px;
@@ -1853,7 +1851,6 @@ a {
     background-image: url(../img/catalog/checkbox-off.svg);
 }
 
-/* Не понимаю тут текст должен меняться по ховеру? */
 .filter-manufacturers__input:checked + .filter-manufacturers__checkbox {
     width: 27px;
     height: 23px;
@@ -1868,7 +1865,7 @@ a {
     background-image: url(../img/catalog/checkbox-off-focus.svg);
 }
 
-.filter-manufacturers__input:checked:focus + .filter-manufacturers__checkbox {
+.filter-manufacturers__input:focus:checked + .filter-manufacturers__checkbox {
     width: 27px;
     height: 23px;
 
