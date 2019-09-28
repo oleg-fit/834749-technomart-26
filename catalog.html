@@ -2,6 +2,8 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-rim-auto-match" content="none">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700|PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
@@ -59,18 +61,22 @@
                         </p>
                     </address>
                     <div class="user-block">
-                        <a class="user-block__name" href="#">
-                            <svg class="user-block__icon-user" enable-background="new 0 0 20 18" height="18" viewBox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278 0-2.807-1.8-5.083-4.021-5.083s-4.021 2.276-4.021 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39s-2.118 3.834-2.118 3.834h20s.025-3.099-2.119-3.834z"/></svg>
-                            Равшан Джамшутович
-                            <svg class="user-block__icon-logout" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	                            width="21px" height="17px" viewBox="0 0 21 17" enable-background="new 0 0 21 17" xml:space="preserve">
-                                <g>
-                                    <polygon points="21,8.5 12.125,0 12.125,6 6.125,6 6.125,11 12.125,11 12.125,17 	"/>
-                                    <path d="M3.106,13.952V3.048c0.018-0.376,0.171-1.057,1.01-1.057h5.027V0H4.116C1.938,0,1.112,1.81,1.087,3.027
-                                        v10.946C1.112,15.189,1.938,17,4.116,17h5.027v-1.99H4.116C3.277,15.01,3.124,14.327,3.106,13.952z"/>
-                                </g>
-                            </svg>
-                        </a>
+                        <div class="registration-block" >
+                            <a class="registration-block__user" href="#">
+                                <svg class="registration-block__icon-user" enable-background="new 0 0 20 18" height="18" viewBox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg"><path d="m17.881 14.166c-2.144-.735-4.256-1.666-5.207-2.39-.657-.501-.77-1.618-.517-2.415 1.118-.903 1.864-2.477 1.864-4.278 0-2.807-1.8-5.083-4.021-5.083s-4.021 2.276-4.021 5.083c0 1.801.746 3.374 1.863 4.277.253.798.141 1.915-.517 2.416-.95.724-3.063 1.654-5.207 2.39s-2.118 3.834-2.118 3.834h20s.025-3.099-2.119-3.834z"/></svg>
+                                <span class="registration-block__name">Равшан Джамшутович</span>
+                            </a>    
+                            <a class="registration-block__out" href="#">
+                                <svg class="registration-block__icon-logout" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                    width="21px" height="17px" viewBox="0 0 21 17" enable-background="new 0 0 21 17" xml:space="preserve">
+                                    <g>
+                                        <polygon points="21,8.5 12.125,0 12.125,6 6.125,6 6.125,11 12.125,11 12.125,17 	"/>
+                                        <path d="M3.106,13.952V3.048c0.018-0.376,0.171-1.057,1.01-1.057h5.027V0H4.116C1.938,0,1.112,1.81,1.087,3.027
+                                            v10.946C1.112,15.189,1.938,17,4.116,17h5.027v-1.99H4.116C3.277,15.01,3.124,14.327,3.106,13.952z"/>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
                         <div class="user-block__links">
                             <a class="user-block__link" href="#">
                                 Мои заказы

@@ -393,66 +393,73 @@ a {
 }
 
 .user-block {
+    position: relative;
+
     margin-top: 13px;
     margin-left: -18px;
 }
 
-.user-block__name {
-    position: relative;
-
-    display: block;
-
-    margin-bottom: 8px;
+.registration-block {
+    display: flex;
+    justify-content: space-between;
+    
+    margin-bottom: 5px;
     padding-top: 10px;
-    padding-right: 67px;
-    padding-bottom: 10px;
-    padding-left: 45px;
+    padding-right: 11px;
+    padding-bottom: 12px;
+    padding-left: 13px;
+    width: 300px;
 
-    font-size: 21px;
-    color: #000000;
-
-    background-color: #ffffff;
+    align-items: center;
+    background-color: #fff; 
 }
 
-.user-block__name:active {
-    color: rgba(0, 0, 0, 0.3);
+/* .registration-block:hover .registration-block__icon-user,
+.registration-block:focus .registration-block__icon-user,
+.registration-block:hover .registration-block__icon-logout,
+.registration-block:focus .registration-block__icon-logout {
+    fill: #32425c;
+} */
+
+.registration-block__user:hover .registration-block__icon-user,
+.registration-block__user:focus .registration-block__icon-user,
+.registration-block__out:hover .registration-block__icon-logout,
+.registration-block__out:focus .registration-block__icon-logout {
+    fill: #32425c;
 }
 
-.user-block__icon-user,
-.user-block__icon-logout {
-    position: absolute;
-    top: 13px;
+.registration-block__user:active .registration-block__icon-user,
+.registration-block__user:active .registration-block__name,
+.registration-block__out:active .registration-block__icon-logout {
+    color: #c5c5c5;
+    fill: #c5c5c5;
+}
 
-    fill: #cccccc;
+.registration-block__icon-user,
+.registration-block__icon-logout {
+    margin-top: 2px;
+
+    fill: #c5c5c5;
     transition: all 0.1s linear;
 }
 
-.user-block__icon-user {
-    left: 13px;
-}
-
-.user-block__icon-logout {
-    right: 9px;
-}
-
-.user-block__name:hover .user-block__icon-user,
-.user-block__name:focus .user-block__icon-user,
-.user-block__name:hover .user-block__icon-logout,
-.user-block__name:focus .user-block__icon-logout {
-    fill: #333366;
-}
-
-.user-block__name:active .user-block__icon-user,
-.user-block__name:active .user-block__icon-logout {
-    fill: #cccccc;
+.registration-block__name {
+    margin-left: 10px;    
+    
+    font-size: 21px;
+    color: #000;
+    
+    transition: all 0.1s linear;
 }
 
 .user-block__links {
-    margin-left: 15px;
+    margin-left: 19px;
 }
 
 .user-block__link {
     color: #32425c;
+
+    text-decoration: underline;
 
     transition: all 0.1s linear;
 }
@@ -1387,6 +1394,7 @@ a {
     top: calc(50% - 15px/2);
     left: calc(50% - 26px/2);
 
+    display: block;
     width: 26px;
     height: 15px;
 
@@ -1399,6 +1407,7 @@ a {
     top: calc(50% - 22px/2);
     left: calc(50% - 12px/2);
 
+    display: block;
     width: 12px;
     height: 22px;
 
@@ -1411,6 +1420,7 @@ a {
     top: calc(50% - 21px/2);
     left: calc(50% - 21px/2);
 
+    display: block;
     width: 21px;
     height: 21px;
 
