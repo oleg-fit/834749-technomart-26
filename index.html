@@ -94,7 +94,7 @@
                 <ul class="main-nav__list">
 
                     <li class="main-nav__item">
-                        <a class="main-nav__link" href="#">
+                        <a class="main-nav__link" href="index.html">
                             Главная
                         </a>
                     </li>
@@ -163,31 +163,57 @@
                                 </a>
                             </div>
                         </div>
+
                         <div class="features__slider slider">
 
-                            <div class="slider__item">
-                                <h3 class="slider__title">
-                                    Дрели
-                                </h3>
-                                <p class="slider__text">
-                                    Соседям на радость!
-                                </p>
-                                <a class="slider__link btn-red" href="catalog.html">
-                                    Открыть каталог
-                                </a>
-                            </div>
-                            <div class="slider__item" style="display: none;">
-                                <h3 class="slider__title">
-                                    Перфораторы
-                                </h3>
-                                <p class="slider__text">
-                                    Настоящие мужские игрушки
-                                </p>
-                                <a class="slider__link btn-red" href="catalog.html">
-                                    Открыть каталог
-                                </a>
+                            <input class="visually-hidden" id="slide1" type="radio" name="toggle" checked>
+                            <input class="visually-hidden" id="slide2" type="radio" name="toggle">
+
+                            <div class="slider__controls">
+
+                                <label class="slider__controls-item controls-item__one" for="slide1">
+                                    <span class="visually-hidden">Первый слайд</span>
+                                </label>
+                                <label class="slider__controls-item controls-item__two" for="slide2">
+                                    <span class="visually-hidden">Второй слайд</span>
+                                </label>
+                            
                             </div>
 
+                            <label class="slider__arrow-left" for="slide1">
+                                <span class="visually-hidden">Стрелка назад</span>
+                            </label>
+                            <label class="slider__arrow-right" for="slide2">
+                                <span class="visually-hidden">Стрелка вперед</span>
+                            </label>
+
+                            <div class="slider__items">
+
+                                <div class="slider__item">
+                                    <h3 class="slider__title">
+                                        Дрели
+                                    </h3>
+                                    <p class="slider__text">
+                                        Соседям на радость!
+                                    </p>
+                                    <a class="slider__link btn-red" href="catalog.html">
+                                        Открыть каталог
+                                    </a>
+                                </div>
+                                <div class="slider__item">
+                                    <h3 class="slider__title">
+                                        Перфораторы
+                                    </h3>
+                                    <p class="slider__text">
+                                        Настоящие мужские игрушки
+                                    </p>
+                                    <a class="slider__link btn-red" href="catalog.html">
+                                        Открыть каталог
+                                    </a>
+                                </div>
+
+                            </div>
+                            
                         </div>  <!-- /.features__slider .slider -->
 
                     </div>  <!-- /.features__left -->
