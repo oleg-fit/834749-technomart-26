@@ -535,9 +535,9 @@
             </div>  <!-- /.container -->
         </section>  <!-- /.information -->
 
-        <section class="write-us">
+        <section class="write-us modal">
         
-            <form class="write-us__form">
+            <form class="write-us__form" method="post" action="https://echo.htmlacademy.ru">
                 <h2 class="visually-hidden">
                     Напиши нам
                 </h2>
@@ -576,26 +576,25 @@
 
         </section>  <!-- /.write-us -->
         
-        <section class="map">
+        <section class="map modal">
         
             <h2 class="visually-hidden">
                 Карта
             </h2>
 
-            <div class="container">
-                <div class="map__inner">
-                    <div class="map-content">
-                        <img src="img/map/map.jpg" alt="Офис на улице: Большая Конюшенная ул., 19" width="940" height="446">
-                    </div>
-                    <button class="btn-close">
-                        <span class="visually-hidden">
-                            Закрыть
-                        </span>
-                        <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
-                    </button>
+            <div class="map__inner">
+                <div class="map-content">
+                    <!-- <img src="img/map/map.jpg" alt="Офис на улице: Большая Конюшенная ул., 19" width="940" height="446"> -->
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d342.0565732549793!2d30.322921267988338!3d59.9387588428442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1570292910890!5m2!1sru!2sru" width="940" height="446" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
-             </div>
-
+                <button class="btn-close">
+                    <span class="visually-hidden">
+                        Закрыть
+                    </span>
+                    <svg enable-background="new 0 0 21 21" height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg"><path d="m13.273 10.5 7.422-7.422c.389-.389.389-1.025 0-1.414l-1.359-1.359c-.389-.389-1.025-.389-1.414 0l-7.422 7.422-7.422-7.422c-.389-.389-1.025-.389-1.414 0l-1.359 1.359c-.389.389-.389 1.025 0 1.414l7.422 7.422-7.421 7.422c-.389.389-.389 1.025 0 1.414l1.359 1.359c.389.389 1.025.389 1.414 0l7.422-7.422 7.422 7.422c.389.389 1.025.389 1.414 0l1.359-1.359c.389-.389.389-1.025 0-1.414z" fill="#ee3643"/></svg>
+                </button>
+            </div>  <!-- /.map__inner -->
+            
         </section>  <!-- /.map -->
 
     </main>
@@ -715,7 +714,7 @@
                         </li>
                         <li class="list-info__item">
                             <p class="list-info__text">
-                                Разработано -
+                                Разработано — 
                             </p>
                             <a class="list-info__link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
                                 htmlacademy.ru
@@ -730,5 +729,6 @@
 
     </footer>  <!-- /.footer -->
 
+    <script src="js/main.js"></script>
   </body>
 </html>
