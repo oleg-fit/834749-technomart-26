@@ -1708,17 +1708,17 @@ a {
 }
 
 /* ======== Map ================= */
-/* Как бэкграунж сделать?? не получаеться!!!! */
-.map {
-    min-height: 446px;
-    min-width: 940px;
-}
-
 .map__inner {
     position: relative;
 }
 
 .map-content {
+    min-height: 446px;
+    width: 940px;
+
+    background-image: url(../img/map/map.jpg);
+    background-repeat: no-repeat;
+
     box-shadow: 0px 0px 14.72px 1.28px rgba(47, 42, 43, 0.5);
 }
 
