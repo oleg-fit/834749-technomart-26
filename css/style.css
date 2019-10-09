@@ -1938,6 +1938,10 @@ a {
     display: block;
 }
 
+.map-content iframe {
+    display: block;
+}
+
 .map .btn-close {
     position: absolute;
     top: 9px;
