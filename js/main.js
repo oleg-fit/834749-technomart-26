@@ -161,8 +161,3 @@ if(linkCloseAddingGoods) {
     });
 
 }
-
-
-
-var number = 123;
-console.log(String(number).length);
